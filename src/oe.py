@@ -486,6 +486,15 @@ def openWizard():
         dbg_log('oe::openWizard', 'ERROR: (' + repr(e) + ')')
 
 
+def Open_URL(url):
+    req = urllib2.Request(url)
+    req.add_header('User-Agent' , 'Mozilla/5.0 (Windows; U; Windows NT 10.0; WOW64; Windows NT 5.1; en-GB; rv:1.9.0.3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.85 Safari/537.36 Gecko/2008092417 Firefox/3.0.3')
+    response = urllib2.urlopen(req)
+    link     = response.read()
+    response.close()
+    return link.replace('\r','').replace('\n','').replace('\t','')
+
+
 def openConfigurationWindow():
     global winOeMain, __cwd__, __oe__, dictModules
     try:
