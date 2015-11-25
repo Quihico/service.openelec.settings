@@ -485,6 +485,35 @@ def openWizard():
         xbmc.executebuiltin('Dialog.Close(busydialog)')
         dbg_log('oe::openWizard', 'ERROR: (' + repr(e) + ')')
 
+def Connectivity_Check():
+    internetcheck = 1
+    try:
+        Open_URL('http://google.com')
+    except:
+        try:
+            Open_URL('http://google.com')
+        except:
+            try:
+                Open_URL('http://google.com')
+            except:
+                try:
+                    Open_URL('http://google.cn')
+                except:
+                    try:
+                        Open_URL('http://google.cn')
+                    except:
+                        internetcheck=0
+    if internetcheck==1:
+        xbmc.executebuiltin('RunAddon(script.openwindow)')
+    if internetcheck==0:
+        datapath = xbmc.translatePath(os.path.join('special://profile/addon_data/service.openelec.settings/',''))
+        if os.path.exists(datapath)==True:
+            shutil.rmtree(datapath)
+        try:
+            xbmc.executebuiltin('RunScript(/usr/share/kodi/addons/service.openelec.settings/service.py)')
+        except:
+            xbmc.executebuiltin('RunScript(special://home/addons/service.openelec.settings/service.py)')
+
 
 def Open_URL(url):
     req = urllib2.Request(url)
