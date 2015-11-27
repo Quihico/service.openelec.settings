@@ -1,7 +1,7 @@
 # Kodi Media Center language file
 # Addon Name: System Configuration
 # Addon id: service.openelec.settings
-# Addon Provider: System
+# Addon Provider: OpenELEC
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Addons\n"
@@ -9,16 +9,16 @@ msgstr ""
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kodi Translation Team\n"
-"Language-Team: Dutch (http://www.transifex.com/projects/p/xbmc-addons/language/nl/)\n"
+"Language-Team: French (http://www.transifex.com/projects/p/xbmc-addons/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nl\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 msgctxt "#600"
 msgid "System Settings"
-msgstr "System Configuratie"
+msgstr "Paramètres Système"
 
 msgctxt "#601"
 msgid "Interface"
@@ -26,7 +26,7 @@ msgstr "Interface"
 
 msgctxt "#602"
 msgid "Address"
-msgstr "Adres"
+msgstr "Adresse"
 
 msgctxt "#603"
 msgid "Type"
@@ -34,147 +34,147 @@ msgstr "Type"
 
 msgctxt "#604"
 msgid "State"
-msgstr "Status"
+msgstr "État"
 
 msgctxt "#605"
 msgid "Address"
-msgstr "Adres"
+msgstr "Adresse"
 
 msgctxt "#606"
 msgid "Distribution: "
-msgstr "Distributie:"
+msgstr "Distribution :"
 
 msgctxt "#607"
 msgid "Version: "
-msgstr "Versie:"
+msgstr "Version :"
 
 msgctxt "#608"
 msgid "Architecture: "
-msgstr "Architectuur:"
+msgstr "Architecture :"
 
 msgctxt "#609"
 msgid "Open Embedded Linux Entertainment Center (OpenELEC) is a minimal Linux distribution purpose built for Kodi media center. OpenELEC is designed to boot fast with an installation process simple enough for anyone to convert a bare HTPC into a fully configured media machine in under 15 minutes."
-msgstr "Open Embedded Linux Entertainment Center (OpenELEC) is een minimale Linux distributie, speciaal gebouwd voor Kodi Media Center. OpenELEC is ontworpen om snel op te starten via een opstartproces dat voor iedereen eenvoudig genoeg is om binnen 15 minuten een kale HTPC in een volledig geconfigureerde media machine om te bouwen."
+msgstr "Open Embedded Linux Entertainment Center (OpenELEC) est un système Linux minimal construit pour Kodi. OpenELEC a été pensé pour démarrer rapidement avec un processus d'installation suffisament simple pour que n'importe qui puisse convertir un ordinateur en machine multimédia en moins de 15 minutes."
 
 msgctxt "#610"
 msgid "[B]Support:[/B][CR]Web: http://openelec.tv[CR]Forum: http://openelec.tv/forum[CR]Wiki: http://wiki.openelec.tv[CR][CR][B]Social Media:[/B][CR]IRC: #openelec on freenode.net (web-based chat is also available from the website)[CR]Twitter: https://twitter.com/openelec[CR]Facebook: http://www.facebook.com/OpenELEC[CR]Google+: https://plus.google.com/+openelec"
-msgstr "[B]Ondersteuning:[/B][CR]Web: http://openelec.tv[CR]Forum: http://openelec.tv/forum[CR]Wiki: http://wiki.openelec.tv[CR][CR][B]Sociale media:[/B][CR]IRC: #openelec op freenode.net (webgebaseerde chat is ook beschikbaar vanaf de website)[CR]Twitter: https://twitter.com/openelec[CR]Facebook: http://www.facebook.com/OpenELEC[CR]Google+: https://plus.google.com/+openelec"
+msgstr "[B]Support:[/B][CR]Web: http://openelec.tv[CR]Forum: http://openelec.tv/forum[CR]Wiki: http://wiki.openelec.tv[CR][CR][B]Médias Sociaux:[/B][CR]IRC: #openelec sur freenode.net (client web aussi disponible sur le site)[CR]Twitter: https://twitter.com/openelec[CR]Facebook: http://www.facebook.com/OpenELEC[CR]Google+: https://plus.google.com/+openelec"
 
 msgctxt "#611"
 msgid "The OpenELEC project runs on goodwill, love, and your donations. If you would like to contribute to the project you can donate using PayPal, Flattr or Bitcoin. Making a donation is easy and takes only a couple of minutes. http://openelec.tv/donate"
-msgstr "Het OpenELEC project draait op goede wil, liefde, en uw donaties. Als u wilt bijdragen aan het project, dan kunt u doneren via PayPal, Flattr of Bitcoin. Een donatie doen is makkelijk en neemt een paar minuten in beslag. Ga naar http://openelec.tv/donate"
+msgstr "Le projet OpenELEC s’appuie sur la bonne volonté, l'amour, et vos dons. Vous pouvez contribuer au projet via PayPal, Flattr ou Bitcoin. Faire un don est simple et ne prend que quelques minutes. http://openelec.tv/donate"
 
 msgctxt "#700"
 msgid "Configure a hostname, keyboard type, perform a reset, update, or backups and restores"
-msgstr "Configureer een hostnaam, toetsenbordtype, voer een reset uit, update, of backups en restores"
+msgstr "Configurer un nom d’hôte, le type de clavier, réinitialiser, mettre à jour, sauvegarder et restaurer"
 
 msgctxt "#701"
 msgid "Configure network startup options, NTP and VPNs"
-msgstr "Configureer netwerk-opstartopties, NTP en VPN's"
+msgstr "Configurer les options de démarrage réseau, NTP et VPNs"
 
 msgctxt "#702"
 msgid "Manage the Ethernet, Wireless and VPN connections available to the system"
-msgstr "Configureer de ethernet-, draadloze- en VPN-verbindingen die binnen het systeem beschikbaar zijn."
+msgstr "Gérer les connexions Ethernet, Wi-Fi et VPN du système"
 
 msgctxt "#703"
 msgid "Configure system services like Samba, SSH, Cron, Avahi and Syslog"
-msgstr "Configureer systeemservices zoals Samba, SSH, Cron, Avahi en Syslog"
+msgstr "Configurer les services du système tels que Samba, SSH, Cron, Avahi et Syslog"
 
 msgctxt "#704"
 msgid "Configure and pair Bluetooth devices"
-msgstr "Configureer en koppel Bluetooth-apparaten"
+msgstr "Configurer et associer des périphériques Bluetooth"
 
 msgctxt "#705"
 msgid "Useful information like version and architecture details, support and social media links, and how to make a donation to the project"
-msgstr "Nuttige informatie zoals versie- en architectuurdetails, ondersteuning en sociale medialinks, en hoe u een donatie aan het project kunt maken"
+msgstr "Informations utiles comme les détails sur la version, l'architecture, les liens pour le support, les réseaux sociaux, et les manières de faire des dons au projet"
 
 msgctxt "#710"
 msgid "Configure the Hostname of your System system. This will be used for the HTPC \\\\hostname in Windows and SMB server name in the Mac OS Finder"
-msgstr "Configureer de hostnaam van uw System systeem. Dit zal gebruikt worden voor de HTPC \\\\hostnaam binnen Windows en SMB servernaam in de Mac OS Finder"
+msgstr "Configurer le nom d'hôte de votre système Système. Celui-ci sera utilisé comme \\\\nom à partir de Windows et comme nom de serveur SMB dans le Finder Mac OS"
 
 msgctxt "#711"
 msgid "Configure the 1st keyboard software layout"
-msgstr "Configureer de 1e toetsenbordlayout"
+msgstr "Configurer le 1er type de clavier"
 
 msgctxt "#712"
 msgid "Configure the 2nd keyboard software layout"
-msgstr "Configureer de 2e toetsenbordlayout"
+msgstr "Configurer le 2ème type de clavier"
 
 msgctxt "#713"
 msgid "Configure the physical keyboard type"
-msgstr "Configureer het fysieke toetsenbordtype"
+msgstr "Configurer le type physique de clavier"
 
 msgctxt "#714"
 msgid "System can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
-msgstr "System kan geconfigureerd worden voor automatische of handmatige updates. Automatische updates zijn beschikbaar voor stabiele uitgaves en stabiele release candidates. Op betaversies en ontwikkelbuilds zijn automatische updates vanzelf uitgeschakeld"
+msgstr "Système peut être configuré pour être mis à jour manuellement ou automatiquement. Les mises à jours automatiques sont disponibles pour les versions stables et release candidates. La mise à jour automatique est désactivée pour les versions de test et les versions de développement"
 
 msgctxt "#715"
 msgid "Set to ON and an on-screen notification will be displayed when a new update is available"
-msgstr "Zet op AAN en een melding zal verschijnen wanneer een nieuwe update beschikbaar is"
+msgstr "Activer pour afficher une notification quand une nouvelle version est disponible"
 
 msgctxt "#716"
 msgid "Click to manually check the System servers for an updated release"
-msgstr "Klik om handmatig op de System servers te controleren voor een bijgewerkte uitgave."
+msgstr "Cliquer pour vérifier si une nouvelle version Système est disponible"
 
 msgctxt "#717"
 msgid "If you have an small LCD or VFD attached to your System system you must configure the correct display driver"
-msgstr "Indien u een smalle LCD of VFD op uw System systeem heeft aangesloten, dan moet u de juiste display driver configureren"
+msgstr "Si vous avez un petit LCD ou VFD relié à votre système Système, vous devez configurer le bon pilote d'affichage"
 
 msgctxt "#720"
 msgid "Set to ON and Bluetooth devices will be disabled during power-saving modes"
-msgstr "Zet op AAN en Bluetooth-apparaten zullen uitgeschakeld worden tijdens stroombesparingsmodi."
+msgstr "Activer pour déconnecter les périphériques Bluetooth en mode économie d'énergie"
 
 msgctxt "#722"
 msgid "Create a tar archive containing all System and Kodi configuration settings, databases and thumbnail content. Backup files will be stored in /storage/backups"
-msgstr "Maak een backup van System en Kodi configuratie, waaronder databases en instellingen. Backupbestanden worden opgeslagen in /storage/backups"
+msgstr "Créer une archive tar contenant les paramètres de configuration, les bases de données et les images pour Système et Kodi. Les fichiers de sauvegarde seront stockés dans /storage/backups"
 
 msgctxt "#723"
 msgid "Restore a tar archive backup previously created using the backup option above"
-msgstr "Herstel een eerder gecreerde backup, gemaakt met de backup-optie hierboven"
+msgstr "Restaurer une archive tar précédemment créée en utilisant l'option de sauvegarde"
 
 msgctxt "#724"
 msgid "[COLOR FF00FF00]SOFT RESET[/COLOR]\nPermanently reset System configuration to defaults (resets also Kodi to default including your library. your media - music/videos/etc are not touched)"
-msgstr "[COLOR FF00FF00]ZACHTE RESET[/COLOR]\nReset System naar standaardwaarden (Herstelt ook Kodi naar het begin inclusief bibliotheek. Media - muziek/video`s/etc. worden niet verwijderd)"
+msgstr "[COLOR FF00FF00]SOFT RESET[/COLOR]\nRéinitialiser définitivement la configuration de Système (réinitialise également Kodi, médiathèque comprise. vos médias - musiques/vidéos/etc ne seront pas touchés)"
 
 msgctxt "#725"
 msgid "[COLOR FFFF0000]HARD RESET[/COLOR]\nPermanently reset System and Kodi configuration to defaults (everything in your storage partition will be deleted)"
-msgstr "[COLOR FFFF0000]HARDE RESET[/COLOR]\nReset  System en Kodi configuratie naar standaardwaarden (verwijdert alle aanwezige bestanden op de storage partitie)"
+msgstr "[COLOR FFFF0000]HARD RESET[/COLOR]\nRéinitialiser définitivement la configuration de Système et Kodi (tout le contenu de votre partition de stockage sera effacé)"
 
 msgctxt "#726"
 msgid "Enable or disable support for Wireless (WLAN) networks"
-msgstr "Ondersteuning voor draadloze (WLAN) netwerken in- of uitschakelen."
+msgstr "Activer ou désactiver le support des réseaux sans fil (WLAN)"
 
 msgctxt "#727"
 msgid "Enable a 'tethered' Wireless Access Point. This requires your wireless card (and driver) to support bridging and access point mode. Not all cards are capable."
-msgstr "Inschakelen van een 'getetherde' draadlozen accesspoint. Dit vereist dat uw draadloze netwerkkaart (en driver) bridging en accesspoint modus ondersteunt. Niet alle netwerkkaarten zijn hiertoe in staat."
+msgstr "Activer le partage de connexion sans fil. Votre carte Wi-Fi (et le pilote) doit supporter le mode pont et le mode point d'accès. Toutes les cartes ne le peuvent pas."
 
 msgctxt "#728"
 msgid "Configure the Access Point SSID"
-msgstr "Configureer de SSID van het accesspoint."
+msgstr "Configurer le SSID du point d'accès"
 
 msgctxt "#729"
 msgid "Configure the Access Point Passphrase"
-msgstr "Configureer het wachtwoord van het accesspoint"
+msgstr "Configurer le mot de passe du point d'accès"
 
 msgctxt "#730"
 msgid "Enable or disable support for Wired (Ethernet) networks"
-msgstr "Schakel ondersteuning voor bekabelde (Ethernet) netwerken in of uit"
+msgstr "Activer ou désactiver le support des réseaux filaires (Ethernet)"
 
 msgctxt "#732"
 msgid "Configure the 1st time (NTP) server"
-msgstr "Configureer de 1e (NTP) tijdsserver"
+msgstr "Configurer le 1er serveur de temps (NTP)"
 
 msgctxt "#733"
 msgid "Configure the 2nd time (NTP) server"
-msgstr "Configureer de 2e (NTP) tijdsserver"
+msgstr "Configurer le 2ème serveur de temps (NTP)"
 
 msgctxt "#734"
 msgid "Configure the 3rd time (NTP) server"
-msgstr "Configureer de 3e (NTP) tijdsserver"
+msgstr "Configurer le 3ème serveur de temps (NTP)"
 
 msgctxt "#736"
 msgid "Set to ON to delay Kodi startup until the network is available. Use this if the OS is booting into Kodi before the network is up and central MySQL databases are accessible."
-msgstr "Zet AAN om het opstarten van Kodi te vertragen totdat het netwerk beschikbaar is. Gebruik dit als het OS sneller Kodi opstart dan dat het netwerk beschikbaar is en dat gecentraliseerde MySQL databases toegankelijk zijn."
+msgstr "Activer pour retarder le démarrage de Kodi jusqu’à ce que le réseau soit disponible. Utilisez cette option si le système démarre avant que le réseau ne soit activé et que la base centralisée MySQL ne soit accessible."
 
 msgctxt "#737"
 msgid "737"
@@ -182,35 +182,35 @@ msgstr "737"
 
 msgctxt "#738"
 msgid "Set to ON to enable the embedded Samba (SMB) filesharing service"
-msgstr "Zet AAN om de ingebouwde Samba (SMB) filesharing service in te schakelen"
+msgstr "Activer l'accès au partage de fichiers Samba (SMB)"
 
 msgctxt "#739"
 msgid "Set to ON to require username/password access to local Samba fileshares"
-msgstr "Zet AAN om gebruikersnaam/wachtwoord toegang tot lokale Samba fileshares te verplichten"
+msgstr "Activer pour que l'accès aux partages Samba requière un identifiant et mot de passe"
 
 msgctxt "#740"
 msgid "Set the username for Samba sharing"
-msgstr "Stel de gebruikersnaam voor Samba sharing in"
+msgstr "Configurer le nom d'utilisateur pour le partage Samba"
 
 msgctxt "#741"
 msgid "Set the password for Samba sharing"
-msgstr "Stel het wachtwoord for Samba sharing in"
+msgstr "Configurer le mot de passe pour le partage Samba"
 
 msgctxt "#742"
 msgid "Set to ON to enable the embedded SSH server. The SSH console can be accessed with username 'root' and password '@ROOT_PASSWORD@'."
-msgstr "Zet op AAN om de ingebouwde SSH-server in te schakelen. De SSH-console is te benaderen via gebruikersnaam 'root' en wachtwoord '@ROOT_PASSWORD@'."
+msgstr "Activer l'accès SSH. La console SSH sera accessible avec l'identifiant 'root' et le mot de passe '@ROOT_PASSWORD@'."
 
 msgctxt "#743"
 msgid "Set to ON if you have copied private SSH keys to your HTPC and would like to improve security by disabling SSH username and password authentication."
-msgstr "Zet op AAN indien u prive SSH-sleutels naar uw HTPC heeft gekopieerd, en u de veiligheid wilt verhogen door SSH gebruikersnaam- en wachtwoordauthenticatie uit te schakelen."
+msgstr "Activer si vous avez copié des clés privées sur votre système pour améliorer la sécurité en désactivant l’authentification SSH par identifiant et mot de passe."
 
 msgctxt "#744"
 msgid "Set to ON to enable the Avahi (Zeroconf/Bonjour) network discovery service"
-msgstr "Zet op AAN om de Avahi (Zeroconf/Bonjour) netwerkzoekservice in te schakelen"
+msgstr "Activer le service de découverte réseau Avahi (Zeroconf/Bonjour)"
 
 msgctxt "#745"
 msgid "Set to ON to enable the cron daemon"
-msgstr "Zet op AAN om de cron-daemon in te schakelen"
+msgstr "Activer le démon Cron"
 
 msgctxt "#750"
 msgid "750"
@@ -218,31 +218,31 @@ msgstr "750"
 
 msgctxt "#751"
 msgid "With OBEX filetransfer you can send files, for example movies or pictures over bluetooth to System."
-msgstr "Met OBEX bestandsoverdracht kun je bestanden oversturen, bijvoorbeeld films of foto's over bluetooth naar System."
+msgstr "Vous pouvez envoyer des fichiers en Bluetooth à Système avec le système OBEX, comme des films ou des images."
 
 msgctxt "#752"
 msgid "Here you can set the folder location where OBEX file transfer should store incoming files"
-msgstr "Hier bepaal je de bestandslocatie waar OBEX bestandsoverdracht inkomende bestanden opslaat"
+msgstr "Rentrez ici le répertoire où OBEX doit enregistrer les fichiers arrivants"
 
 msgctxt "#753"
 msgid "Configure the 1st keyboard software Variant"
-msgstr "Configureer de 1e toetsenbord software variant"
+msgstr "Configurer la variante du 1er type de clavier"
 
 msgctxt "#754"
 msgid "Configure the 2nd keyboard software Variant"
-msgstr "Configureer de 2e toetsenbord software variant"
+msgstr "Configurer la variante du 2ème type de clavier"
 
 msgctxt "#755"
 msgid "Auto share external drives / partitions"
-msgstr "Automatisch delen externe schijven / partities"
+msgstr "Partage automatique des partitions / lecteurs externes"
 
 msgctxt "#32001"
 msgid "Services"
-msgstr "Diensten"
+msgstr "Services"
 
 msgctxt "#32002"
 msgid "System"
-msgstr "Systeem"
+msgstr "Système"
 
 msgctxt "#32003"
 msgid "Interface"
@@ -250,71 +250,71 @@ msgstr "Interface"
 
 msgctxt "#32007"
 msgid "Driver"
-msgstr "Stuurbestand"
+msgstr "Pilote"
 
 msgctxt "#32008"
 msgid "LCD/VFD Driver"
-msgstr "LCD/VFD stuurbestand"
+msgstr "Pilote LCD/VFD"
 
 msgctxt "#32009"
 msgid "Keyboard"
-msgstr "Toetsenbord"
+msgstr "Clavier"
 
 msgctxt "#32010"
 msgid "Keyboard Layout"
-msgstr "Toetsenbordindeling"
+msgstr "Disposition du clavier"
 
 msgctxt "#32012"
 msgid "Select Action"
-msgstr "Selecteer actie"
+msgstr "Choisir une Action"
 
 msgctxt "#32013"
 msgid "Updates"
-msgstr "Updates"
+msgstr "Mises à jour"
 
 msgctxt "#32014"
 msgid "Automatic Updates"
-msgstr "Automatische updates"
+msgstr "Mises à jour automatiques"
 
 msgctxt "#32100"
 msgid "Connections"
-msgstr "Verbindingen"
+msgstr "Connexions"
 
 msgctxt "#32101"
 msgid "Network"
-msgstr "Netwerk"
+msgstr "Réseau"
 
 msgctxt "#32102"
 msgid "Wireless Networks"
-msgstr "Draadloze netwerken"
+msgstr "Réseaux sans fil"
 
 msgctxt "#32103"
 msgid "Wired Networks"
-msgstr "Bekabelde netwerken"
+msgstr "Réseaux filaires"
 
 msgctxt "#32105"
 msgid "Active"
-msgstr "Actief"
+msgstr "Active"
 
 msgctxt "#32106"
 msgid "Username"
-msgstr "Gebruikersnaam"
+msgstr "Identifiant"
 
 msgctxt "#32107"
 msgid "Passphrase"
-msgstr "Wachtwoord"
+msgstr "Mot de passe"
 
 msgctxt "#32108"
 msgid "Enable 'tethered' Wireless Access Point"
-msgstr "Inschakelen 'getetherde' draadloze accesspoint"
+msgstr "Activer le partage de connexion sans fil"
 
 msgctxt "#32109"
 msgid "Connect Automatically"
-msgstr "Automatische verbinding"
+msgstr "Connexion automatique"
 
 msgctxt "#32110"
 msgid "Connection"
-msgstr "Verbinding"
+msgstr "Connexion"
 
 msgctxt "#32111"
 msgid "IPv4"
@@ -326,159 +326,159 @@ msgstr "IPv6"
 
 msgctxt "#32113"
 msgid "IP Address Method"
-msgstr "IP adresmethode"
+msgstr "Méthode d'adressage"
 
 msgctxt "#32114"
 msgid "IP Address"
-msgstr "IPadres"
+msgstr "Adresse IP"
 
 msgctxt "#32115"
 msgid "Subnet Mask"
-msgstr "Subnetmasker"
+msgstr "Masque de sous-réseau"
 
 msgctxt "#32116"
 msgid "Default Gateway"
-msgstr "Standaard gateway"
+msgstr "Passerelle par défaut"
 
 msgctxt "#32117"
 msgid "Prefix Length"
-msgstr "Prefix lengte"
+msgstr "Longueur du préfixe"
 
 msgctxt "#32118"
 msgid "Privacy"
-msgstr "Privacy"
+msgstr "Confidentialité"
 
 msgctxt "#32119"
 msgid "DNS Servers"
-msgstr "DNS servers"
+msgstr "Serveurs DNS"
 
 msgctxt "#32120"
 msgid "Nameserver #1"
-msgstr "Naamserver #1"
+msgstr "DNS #1"
 
 msgctxt "#32121"
 msgid "Nameserver #2"
-msgstr "Naamserver #2"
+msgstr "DNS #2"
 
 msgctxt "#32122"
 msgid "Nameserver #3"
-msgstr "Naamserver #3"
+msgstr "DNS #3"
 
 msgctxt "#32123"
 msgid "NTP Servers"
-msgstr "NTP Servers"
+msgstr "Serveurs NTP"
 
 msgctxt "#32124"
 msgid "Timeserver #1"
-msgstr "Tijdsserver #1"
+msgstr "Serveur de temps #1"
 
 msgctxt "#32125"
 msgid "Timeserver #2"
-msgstr "Tijdsserver #2"
+msgstr "Serveur de temps #2"
 
 msgctxt "#32126"
 msgid "Timeserver #3"
-msgstr "Tijdsserver #3"
+msgstr "Serveur de temps #3"
 
 msgctxt "#32127"
 msgid "DNS Domains"
-msgstr "DNS domeinen"
+msgstr "Domaines DNS"
 
 msgctxt "#32128"
 msgid "Domain #1"
-msgstr "Domein #1"
+msgstr "Domaine #1"
 
 msgctxt "#32129"
 msgid "Domain #2"
-msgstr "Domein #2"
+msgstr "Domaine #2"
 
 msgctxt "#32130"
 msgid "Domain #3"
-msgstr "Domein #3"
+msgstr "Domaine #3"
 
 msgctxt "#32140"
 msgid "Save"
-msgstr "Opslaan"
+msgstr "Enregistrer"
 
 msgctxt "#32141"
 msgid "Delete"
-msgstr "Verwijderen"
+msgstr "Supprimer"
 
 msgctxt "#32142"
 msgid "Refresh"
-msgstr "Ververs"
+msgstr "Rafraîchir"
 
 msgctxt "#32143"
 msgid "Disconnect"
-msgstr "Verbreken"
+msgstr "Déconnexion"
 
 msgctxt "#32144"
 msgid "Connect"
-msgstr "Verbinden"
+msgstr "Connexion"
 
 msgctxt "#32146"
 msgid "Hidden Network Name"
-msgstr "Verborgen netwerknaam"
+msgstr "Nom de réseau masqué"
 
 msgctxt "#32147"
 msgid "Wireless Network Passphrase"
-msgstr "Draadloze netwerkwachtwoord"
+msgstr "Mot de passe du réseau sans fil"
 
 msgctxt "#32148"
 msgid "Wireless Network Username"
-msgstr "Draadloze netwerkgebruikersnaam"
+msgstr "Identifiant du réseau sans fil"
 
 msgctxt "#32150"
 msgid "Edit"
-msgstr "Wijzigen"
+msgstr "Éditer"
 
 msgctxt "#32180"
 msgid "Would you like to update System now?"
-msgstr "System nu updaten?"
+msgstr "Voulez-vous mettre Système à jour ?"
 
 msgctxt "#32181"
 msgid "Filename"
-msgstr "Bestandsnaam"
+msgstr "Nom de fichier"
 
 msgctxt "#32182"
 msgid "Download speed"
-msgstr "Downloadsnelheid"
+msgstr "Vitesse de téléchargement"
 
 msgctxt "#32183"
 msgid "Time remaining"
-msgstr "Tijd nog te gaan"
+msgstr "Temps restant"
 
 msgctxt "#32184"
 msgid "Extract file"
-msgstr "Uitpakken bestand"
+msgstr "Extraction du fichier"
 
 msgctxt "#32185"
 msgid "Extract speed"
-msgstr "Uitpaksnelheid"
+msgstr "Vitesse d'extraction"
 
 msgctxt "#32186"
 msgid "Initialize Archive File"
-msgstr "Aanmaken archiefbestand"
+msgstr "Initialiser le fichier d'archivage"
 
 msgctxt "#32187"
 msgid "Latest Version"
-msgstr "Nieuwste versie"
+msgstr "Dernière version"
 
 msgctxt "#32188"
 msgid "Current Version"
-msgstr "Huidige versie"
+msgstr "Version actuelle"
 
 msgctxt "#32189"
 msgid "Identification"
-msgstr "Identificatie"
+msgstr "Identification"
 
 msgctxt "#32190"
 msgid "System Name"
-msgstr "Systeemnaam"
+msgstr "Nom du système"
 
 msgctxt "#32196"
 msgid "About"
-msgstr "Over"
+msgstr "À propos"
 
 msgctxt "#32198"
 msgid "SSID"
@@ -494,23 +494,23 @@ msgstr "SSH"
 
 msgctxt "#32202"
 msgid "Use Samba Password Authentication"
-msgstr "Gebruik Samba wachtwoordauthenticatie"
+msgstr "Utiliser un mot de passe Samba"
 
 msgctxt "#32203"
 msgid "Disable SSH Password"
-msgstr "Uitschakelen SSH wachtwoord"
+msgstr "Désactiver le mot de passe SSH"
 
 msgctxt "#32204"
 msgid "Enable Samba"
-msgstr "Inschakelen Samba"
+msgstr "Activer Samba"
 
 msgctxt "#32205"
 msgid "Enable SSH"
-msgstr "Inschakelen SSH"
+msgstr "Activer SSH"
 
 msgctxt "#32206"
 msgid "Enable Avahi (Zeroconf)"
-msgstr "Inschakelen Avahi (Zeroconf)"
+msgstr "Activer Avahi (Zeroconf)"
 
 msgctxt "#32207"
 msgid "Avahi"
@@ -518,75 +518,75 @@ msgstr "Avahi"
 
 msgctxt "#32208"
 msgid "Hidden Wlan"
-msgstr "Verborgen Wlan"
+msgstr "Wlan masqué"
 
 msgctxt "#32212"
 msgid "Cancel"
-msgstr "Annuleren"
+msgstr "Annuler"
 
 msgctxt "#32216"
 msgid "Auto-Share External Drives"
-msgstr "Automatisch-delen externe schijven"
+msgstr "Partage automatique des lecteurs externes"
 
 msgctxt "#32300"
 msgid "Welcome to System"
-msgstr "Welkom bij System!"
+msgstr "Bienvenue sur Système"
 
 msgctxt "#32301"
 msgid "Welcome"
-msgstr "Welkom"
+msgstr "Bienvenue"
 
 msgctxt "#32302"
-msgid "This wizard will guide you through the process of setting up your new System installation - setting your location, timezone and connecting you to the internet.[CR][CR]These settings can be changed later by navigating to Programs > System Settings."
-msgstr "Deze wizard helpt u tijdens het opzetten van uw nieuwe Systeem installatie - instellen van uw locatie, tijdzone en het verbinden met het internet.[CR][CR]Deze instellingen kunnen later gewijzigd worden door te navigeren naar Programma's > Systeem Instellingen."
+msgid "You will now be guided through any settings that need adjusting.[CR][CR]During this process your device may install important updates, please do not power down the unit at this time.[CR][CR][CR]Press Next to continue."
+msgstr "Vous allez maintenant être guidé à travers tous les paramètres qui ont besoin de réglage.[CR][CR]Pendant ce processus, votre appareil peut installer les mises à jour importantes, s'il vous plaît ne pas éteindre l'appareil à ce moment.[CR][CR][CR]Appuyez sur Suivant pour continuer."
 
 msgctxt "#32303"
 msgid "Next"
-msgstr "Volgende"
+msgstr "Suivant"
 
 msgctxt "#32304"
 msgid "To be identified easily on the network, your new System machine needs a name.[CR][CR]Try to choose something meaningful - like the room it's in - so you'll know what it is when you see it on the network.[CR][CR]This name is used when configuring network services, like file sharing using samba."
-msgstr "Om makkelijk op het netwerk herkend te worden, heeft uw nieuwe System machine een naam nodig.[CR][CR]Probeer iets herkenbaars te kiezen - zoals de kamer waar het in staat - zodat u weet wat het is als u op uw netwerk kijkt.[CR][CR]Deze naam wordt gebruikt bij het configureren van netwerkservices, zoals het delen van bestanden met gebruik van Samba."
+msgstr "Afin d'être facilement identifiable sur le réseau, votre nouvelle machine Système a besoin d'un nom.[CR][CR]Essayez de choisir un nom significatif - comme le nom de la pièce - pour bien l'identifier.[CR][CR]Ce nom est utilisé pour la configuration des services réseau, comme le partage de fichiers Samba."
 
 msgctxt "#32305"
 msgid "Networking"
-msgstr "Netwerken"
+msgstr "Réseau"
 
 msgctxt "#32306"
 msgid "Choose your internet connection.[CR][CR]Network settings can be changed later by navigating to:[CR]        Programs > System Configuration > Network.[CR]Changing your Wifi connection can be done by navigating to:[CR]        Programs > System Configuration > Connections."
-msgstr "Kies uw internet verbinding.[CR][CR]Netwerk instellingen kunnen later gewijzigd worden door te navigeren naar:[CR]        Programma's > Systeem Configuratie > Netwerk.[CR]Wifi instellingen kunnen gewijzigd worden door te navigeren naar:[CR]        Programma's > Systeem Configuration > Verbindingen."
+msgstr "Choisissez votre connexion Internet.[CR][CR]Les paramètres réseau peuvent être modifiés ultérieurement en accédant à:[CR]        Programmes> Configuration Système> Réseau.[CR]Changer votre connexion Wifi peut être fait en accédant à:[CR]        Programmes> Configuration du système> Connexions."
 
 msgctxt "#32308"
 msgid "Hostname:"
-msgstr "Hostnaam:"
+msgstr "Nom d'hôte :"
 
 msgctxt "#32309"
 msgid "The following Networks are currently available:"
-msgstr "De volgende netwerken zijn nu beschikbaar:"
+msgstr "Les réseaux suivants sont disponibles :"
 
 msgctxt "#32311"
 msgid "Sharing and Remote Access"
-msgstr "Bestandsdeling en externe toegang "
+msgstr "Partage et accès distant"
 
 msgctxt "#32312"
 msgid "System also supports SSH for remote access. This is for advanced users who wish to interact with System's underlying operating system. The default user is [COLOR blue]root[/COLOR] and the default password is [COLOR blue]@ROOT_PASSWORD@[/COLOR]."
-msgstr "System ondersteunt ook SSH voor externe toegang. Dit is voor gevorderde gebruikers die met het onderliggende systeem van System willen werken. De standaardgebruiker is [COLOR blue]root[/COLOR] en het standaardwachtwoord is [COLOR blue]@ROOT_PASSWORD@[/COLOR]"
+msgstr "Système permet l'accès distant par SSH. Cet accès est destiné aux utilisateurs avancés qui souhaitent interagir avec le système sous-jacent de Système. L'utilisateur par défaut est [COLOR blue]root[/COLOR] et le mot de passe par défaut est [COLOR blue]@ROOT_PASSWORD@.[/COLOR]"
 
 msgctxt "#32313"
 msgid "In order to share your files between your computers System has incorporated a samba server. This samba server can be integrated into your local network by accessing it in a familiar way with Finder or Windows Explorer."
-msgstr "System beschikt over Samba voor het delen van bestanden via het netwerk. Deze Samba service kan in uw lokale netwerk gevonden  worden op de gebruikelijke manier met Mac Finder of Windows Explorer."
+msgstr "Pour partager les fichiers entre vos ordinateurs, Système embarque un serveur Samba. Ce serveur Samba peut être intégré dans votre réseau local pour un accès facile à partir du Finder de MacOS ou de l'explorateur de Windows."
 
 msgctxt "#32316"
 msgid "Configure Services:"
-msgstr "Configureer services:"
+msgstr "Configurer les services :"
 
 msgctxt "#32317"
 msgid "Thank you"
-msgstr "Dankuwel"
+msgstr "Merci"
 
 msgctxt "#32318"
 msgid "Your System installation is now complete and you'll now enter Kodi when you can set up your media libraries. For help with this, there is a guide available at wiki.kodi.tv[CR][CR]System is developed by a dedicated team of developers who work purely in their spare time. Even as a volunteer project, we still have to pay for our internet bandwidth and development resources so if you find System useful, we will always appreciate a donation of any amount.[CR][CR]Finally, we hope you enjoy using System as much as we've enjoying building it. If you need any more help, you can find links to get help along with latest news at our website"
-msgstr "De System installatie is voltooid, Kodi wordt nu automatisch gestart. Documentatie voor het gebruik van Kodi is te vinden op wiki.kodi.tv[CR][CR]System is ontwikkeld door een toegewijd team van ontwikkelaars, in hun vrije tijd. Een donatie aan het  System project wordt op prijs gesteld.[CR][CR]We hopen dat u van System net zo zult genieten als dat wij het fijn vonden het te ontwikkelen. Indien u nog meer hulp nodig heeft, dan kunt u links daarvoor vinden alsook het laatste nieuws op onze website."
+msgstr "Votre installation Système est terminée. Vous allez maintenant accéder à Kodi où vous pourrez configurer votre bibliothèque multimédia. Un guide est disponible pour vous aider sur wiki.kodi.tv.[CR][CR]Système est développé par une équipe dévouée qui travaille exclusivement sur son temps libre. Malgré cela, nous avons besoin de payer la bande passante et les ressources pour le développement. Si vous trouvez Système utile, n'hésitez pas un faire un don, quelqu'en soit le montant.[CR][CR]Nous espérons que vous aimerez utiliser Système autant que nous aimons le créer. Si vous avez besoin de plus d'aide, vous pouvez utiliser les liens où vous trouverez de l'aide ainsi que les dernières actualités sur notre site Internet"
 
 msgctxt "#32319"
 msgid "Cron"
@@ -594,35 +594,35 @@ msgstr "Cron"
 
 msgctxt "#32320"
 msgid "Enable Cron"
-msgstr "Inschakelen cron"
+msgstr "Activer Cron"
 
 msgctxt "#32323"
 msgid "Reset to Defaults"
-msgstr "Terugzetten naar standaardwaarden"
+msgstr "Réinitialisation"
 
 msgctxt "#32324"
 msgid "Reset System Settings to defaults"
-msgstr "Terugzetten systeeminstellingen naar standaardwaarden"
+msgstr "Restaurer les paramètres système par défaut"
 
 msgctxt "#32325"
 msgid "Reset System to defaults"
-msgstr "Herstel System naar standaardwaarden"
+msgstr "Réinitialiser Système à ses valeurs par défaut"
 
 msgctxt "#32326"
 msgid "Are you sure?"
-msgstr "Weet u het zeker?"
+msgstr "Êtes-vous sûr(e) ?"
 
 msgctxt "#32328"
 msgid "The system must reboot."
-msgstr "Het systeem moet herstarten."
+msgstr "Le système doit redémarrer."
 
 msgctxt "#32329"
 msgid "Rebooting in %d seconds"
-msgstr "Herstart in %d seconden"
+msgstr "Redémarrage dans %d secondes"
 
 msgctxt "#32330"
 msgid "Keyboard Type"
-msgstr "Toetsenbordtype"
+msgstr "Type de clavier"
 
 msgctxt "#32331"
 msgid "Bluetooth"
@@ -630,140 +630,140 @@ msgstr "Bluetooth"
 
 msgctxt "#32333"
 msgid "Connected: "
-msgstr "Verbonden met:"
+msgstr "Connecté : "
 
 msgctxt "#32334"
 msgid "Yes"
-msgstr "Ja"
+msgstr "Oui"
 
 msgctxt "#32335"
 msgid "No"
-msgstr "Nee"
+msgstr "Non"
 
 msgctxt "#32338"
 msgid "No Bluetooth adapter found."
-msgstr "Bluetooth adapter niet gevonden."
+msgstr "Aucun adaptateur Bluetooth trouvé."
 
 msgctxt "#32339"
 msgid "No Bluetooth device found. Please put your Bluetooth device into discovery mode[CR]and start the scan"
-msgstr "Geen Bluetooth apparaat gevonden. Stel uw Bluetooth apparaat in op Discovery modus[CR]en start het scannen"
+msgstr "Aucun périphérique Bluetooth trouvé. Mettez votre périphérique Bluetooth en mode découverte[CR]et lancez le balayage"
 
 msgctxt "#32343"
 msgid "Enter the following Key on your Device."
-msgstr "Voer de volgende sleutel in op uw apparaat"
+msgstr "Saisissez la clé suivante sur votre périphérique."
 
 msgctxt "#32344"
 msgid "Enable Bluetooth"
-msgstr "Schakel Bluetooth In"
+msgstr "Activer le Bluetooth"
 
 msgctxt "#32346"
 msgid "Bluetooth is disabled"
-msgstr "Bluetooth is uitgeschakeld"
+msgstr "Le Bluetooth est désactivé"
 
 msgctxt "#32358"
 msgid "Trust and Connect"
-msgstr "Vertrouw en verbind"
+msgstr "Approuver et connecter"
 
 msgctxt "#32362"
 msgid "Check for updates now:"
-msgstr "Controleer nu op updates:"
+msgstr "Vérifier les mises à jours :"
 
 msgctxt "#32363"
 msgid "System"
-msgstr "System"
+msgstr "Système"
 
 msgctxt "#32364"
 msgid "Update available"
-msgstr "Update beschikbaar"
+msgstr "Mise à jour disponible"
 
 msgctxt "#32365"
 msgid "Show Update Notifications"
-msgstr "Toon updatemeldingen"
+msgstr "Afficher les notifications de mises à jour"
 
 msgctxt "#32366"
 msgid "Update Download Completed"
-msgstr "Downloaden update voltooid"
+msgstr "Téléchargement de la mise à jour terminé"
 
 msgctxt "#32367"
 msgid "Update Extract Complete"
-msgstr "Uitpakken update voltooid"
+msgstr "Extraction de la mise à jour terminée"
 
 msgctxt "#32368"
 msgid "Advanced Network Settings"
-msgstr "Geavanceerde netwerkinstellingen"
+msgstr "Paramètres réseau avancés"
 
 msgctxt "#32369"
 msgid "Wait for network before starting Kodi"
-msgstr "Wacht op het netwerk om Kodi te starten"
+msgstr "Attendre le réseau avant de lancer Kodi"
 
 msgctxt "#32370"
 msgid "Maximum Wait Time (Sec.)"
-msgstr "Maximale wachttijd (sec.)"
+msgstr "Temps d'attente maximum (Secondes)"
 
 msgctxt "#32371"
 msgid "Backup"
-msgstr "Backup"
+msgstr "Sauvegarde"
 
 msgctxt "#32372"
 msgid "Create System and Kodi Backup"
-msgstr "Maak systeem- en Kodi-backup"
+msgstr "Créer une sauvegarde du système et de Kodi"
 
 msgctxt "#32373"
 msgid "Restore Backup"
-msgstr "Terugzetten backup"
+msgstr "Restaurer la sauvegarde"
 
 msgctxt "#32375"
 msgid "Backup Progress"
-msgstr "Backupvoortgang"
+msgstr "Progression de la sauvegarde"
 
 msgctxt "#32379"
 msgid "There is not enough free storage space to continue!"
-msgstr "Er is niet genoeg vrije schijfruimte om verder te gaan!"
+msgstr "L'espace disque disponible est insuffisant pour continuer !"
 
 msgctxt "#32380"
 msgid "Restoring system settings requires a reboot. Are you sure you want to restore?"
-msgstr "Terugzetten van systeeminstellingen vereist een reboot. Weet u zeker dat u de instellingen wilt terugzetten?"
+msgstr "Restaurer les paramètres système requiert un redémarrage. Êtes-vous sûr de vouloir restaurer ?"
 
 msgctxt "#32381"
 msgid "Accept incoming Bluetooth Filetransfer ?"
-msgstr "Accepteer inkomende Bluetooth bestandsoverdracht?"
+msgstr "Accepter le transfert Bluetooth entrant ?"
 
 msgctxt "#32382"
 msgid "Speed"
-msgstr "Snelheid"
+msgstr "Vitesse"
 
 msgctxt "#32383"
 msgid "Play Files ?"
-msgstr "Speel Bestanden Af?"
+msgstr "Jouer les fichiers ?"
 
 msgctxt "#32384"
 msgid "OBEX Enabled"
-msgstr "Schakel OBEX In?"
+msgstr "OBEX activé"
 
 msgctxt "#32385"
 msgid "OBEX Upload Folder"
-msgstr "OBEX Upload Map"
+msgstr "Répertoire d'envoi OBEX"
 
 msgctxt "#32386"
 msgid "Keyboard Layout Variant #1"
-msgstr "Toetsenbordindeling variant #1"
+msgstr "Variante N°1 du clavier"
 
 msgctxt "#32387"
 msgid "Keyboard Layout Variant #2"
-msgstr "Toetsenbordindeling variant #2"
+msgstr "Variante N°2 du clavier"
 
 msgctxt "#32388"
 msgid "Enable Standby"
-msgstr "Activeer standby"
+msgstr "Activer la mise en veille"
 
 msgctxt "#32389"
 msgid "Disable Standby"
-msgstr "Deactiveer standby"
+msgstr "Désactiver la mise en veille"
 
 msgctxt "#32390"
 msgid "Settings addon is not yet ready, please try again later."
-msgstr "instellingen add-on is nog niet klaar, probeer het later nogmaals."
+msgstr "L'extension Réglages n'est pas encore prête, merci de réessayer plus tard."
 
 msgctxt "#32391"
 msgid "Enable LCD Driver Support"
-msgstr "Activeer LCD driver ondersteuning"
+msgstr "Activer le support du LCD"
