@@ -481,47 +481,10 @@ def openWizard():
         winOeMain = oeWindows.wizard('wizard.xml', __cwd__, 'Default', oeMain=__oe__)
         winOeMain.doModal()
         winOeMain = oeWindows.mainWindow('mainWindow.xml', __cwd__, 'Default', oeMain=__oe__)  # None
+        xbmc.executebuiltin('RunAddon(script.openwindow)')
     except Exception, e:
         xbmc.executebuiltin('Dialog.Close(busydialog)')
         dbg_log('oe::openWizard', 'ERROR: (' + repr(e) + ')')
-
-def Connectivity_Check():
-    internetcheck = 1
-    try:
-        Open_URL('http://google.com')
-    except:
-        try:
-            Open_URL('http://google.com')
-        except:
-            try:
-                Open_URL('http://google.com')
-            except:
-                try:
-                    Open_URL('http://google.cn')
-                except:
-                    try:
-                        Open_URL('http://google.cn')
-                    except:
-                        internetcheck=0
-    if internetcheck==1:
-        xbmc.executebuiltin('RunAddon(script.openwindow)')
-    if internetcheck==0:
-        datapath = xbmc.translatePath(os.path.join('special://profile/addon_data/service.openelec.settings/',''))
-        if os.path.exists(datapath)==True:
-            shutil.rmtree(datapath)
-        try:
-            xbmc.executebuiltin('RunScript(/usr/share/kodi/addons/service.openelec.settings/service.py)')
-        except:
-            xbmc.executebuiltin('RunScript(special://home/addons/service.openelec.settings/service.py)')
-
-
-def Open_URL(url):
-    req = urllib2.Request(url)
-    req.add_header('User-Agent' , 'Mozilla/5.0 (Windows; U; Windows NT 10.0; WOW64; Windows NT 5.1; en-GB; rv:1.9.0.3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.85 Safari/537.36 Gecko/2008092417 Firefox/3.0.3')
-    response = urllib2.urlopen(req)
-    link     = response.read()
-    response.close()
-    return link.replace('\r','').replace('\n','').replace('\t','')
 
 
 def openConfigurationWindow():
