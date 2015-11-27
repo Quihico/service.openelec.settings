@@ -29,11 +29,13 @@
 import xbmc
 import xbmcaddon
 import xbmcgui
+import xbmcplugin
+import xbmcvfs
 import os
 import re
 import locale
 import sys
-import urllib2
+import urllib, urllib2
 import time
 import tarfile
 import traceback
@@ -41,23 +43,34 @@ import subprocess
 import dbus
 import dbus.mainloop.glib
 import defaults
+import extract
+import downloader
+import datetime
+import zipfile
+import shutil
 
 from xml.dom import minidom
 
-__author__ = 'OpenELEC'
-__scriptid__ = 'service.openelec.settings'
-__addon__ = xbmcaddon.Addon(id=__scriptid__)
-__cwd__ = __addon__.getAddonInfo('path')
-__oe__ = sys.modules[globals()['__name__']]
-__media__ = '%s/resources/skins/Default/media' % __cwd__
+__author__    = 'OpenELEC'
+__scriptid__  = 'service.openelec.settings'
+__addon__     = xbmcaddon.Addon(id=__scriptid__)
+__cwd__       = __addon__.getAddonInfo('path')
+__oe__        = sys.modules[globals()['__name__']]
+__media__     = '%s/resources/skins/Default/media' % __cwd__
 
-is_service = False
-conf_lock = False
-__busy__ = 0
+#variables used for calculating download speeds
+currently_downloaded_bytes = 0.0
+max_Bps                    = 0.0
+
+dp            = xbmcgui.DialogProgress()
+dialog        = xbmcgui.Dialog()
+is_service    = False
+conf_lock     = False
+__busy__      = 0
 xbmcIsPlaying = 0
 input_request = False
-dictModules = {}
-listObject = {
+dictModules   = {}
+listObject    = {
     'list': 1100,
     'netlist': 1200,
     'btlist': 1300,
@@ -481,12 +494,136 @@ def openWizard():
         winOeMain = oeWindows.wizard('wizard.xml', __cwd__, 'Default', oeMain=__oe__)
         winOeMain.doModal()
         winOeMain = oeWindows.mainWindow('mainWindow.xml', __cwd__, 'Default', oeMain=__oe__)  # None
-        xbmc.executebuiltin('RunAddon(script.openwindow)')
+        AfterWizard()
     except Exception, e:
         xbmc.executebuiltin('Dialog.Close(busydialog)')
         dbg_log('oe::openWizard', 'ERROR: (' + repr(e) + ')')
 
+def AfterWizard():
+    global winOeMain, __cwd__, __oe__
+    if not os.path.exists(firstrun):
+        try:
+# read the contents of /etc/release and send them to the php code, this will send back the relevant update files for download.
+            localfile = open(release, mode='r')
+            content   = localfile.read()
+            localfile.close()
+            updateURL = 'http://www.thelittleblackbox.com/frun/updatefiles.php?id=%s'% (content)
+# following function now downloads updates AND also does a speedtest - saves having to download extra files later just for speedtesting.
+            runtest(updateURL)
+            if os.path.exists(success):
+                dp.create('Installing Updates','Please wait...','')
+                extract.all(firstrunzip,'/storage',dp)
+    #            while xbmc.getCondVisibility("Window.IsActive(progressdialog)"):
+    #                xbmc.sleep(1000)
+                if not os.path.exists(firstrun):
+                    os.makedirs(firstrun)
+                    xbmc.log("## created firstrun dir ##")
+                try:
+                    xbmc.executebuiltin( 'UpdateLocalAddons' )
+                    xbmc.sleep(1000)
+                    xbmc.executebuiltin( 'UpdateAddonRepos' )
+                    xbmc.sleep(2000)
+                    xbmc.log("## Updated Addons ##")
+                except: pass
+                try:
+                    os.remove(firstrunzip)
+                    xbmc.log("## Removed update zip file ##")
+                except: pass
+                try:
+                    shutil.rmtree(success)
+                    xbmc.log("## Removed temp success file ##")
+                except: pass
+# kill kodi so guisettings.xml can be successfully saved
+                try: os.system('killall XBMC')
+                except: pass
+                try: os.system('killall Kodi')
+                except: pass
+                try: os.system('killall -9 xbmc.bin')
+                except: pass
+                try: os.system('killall -9 kodi.bin')
+                except: pass
+        except:
+            dialog.ok('Update download failed','There was a problem trying to download the latest updates, please go to your settings and make sure you\'re connected. Once connected reboot and your update will download.')
+# call the main TLBB startup wizard once OE wizard is complete
+    try:
+        xbmc.executebuiltin('RunAddon(script.openwindow)')
+    except: 
+        pass
+		
+################   SPEEDTEST / DOWNLOAD FUNCTIONS   #################################
+# get final results of speedtest and show user what they should expect to be able to stream.
+def runtest(url):
+    timetaken = download(url, firstrunzip)
+    avgspeed = ((currently_downloaded_bytes / timetaken) * 8 / ( 1024 * 1024 ))
+    maxspeed = (max_Bps * 8/(1024*1024))
+    if avgspeed < 2:
+        livestreams = 'Very low quality streams may work'
+        onlinevids = 'Expect buffering, do not try HD'
+    elif avgspeed < 2.5:
+        livestreams = 'You should be ok for SD content only'
+        onlinevids = 'SD/DVD quality should be ok, do not try HD'
+    elif avgspeed < 5:
+        livestreams = 'Some HD streams may struggle, SD will be fine'
+        onlinevids = 'Most will be fine, some Blurays may struggle'
+    elif avgspeed < 10:
+        livestreams = 'All streams including HD should stream fine'
+        onlinevids = 'Most will be fine, some Blurays may struggle'
+    else:
+        livestreams = 'All streams including HD should stream fine'
+        onlinevids = 'You can play all files with no problems'
+    print "Average Speed: " + str(avgspeed)
+    print "Max. Speed: " + str(maxspeed)
+    dialog = xbmcgui.Dialog()
+    if os.path.exists(success):
+        ok = dialog.ok('Speed Test - Results','[COLOR blue]Live Streams:[/COLOR] ' + livestreams,'','[COLOR blue]Online Video:[/COLOR] ' + onlinevids)
 
+# code to show current download progress. Most code here is unused at the moment but we may decide to implement it later.
+def _pbhook(numblocks, blocksize, filesize, dp, start_time):
+        global max_Bps
+        global currently_downloaded_bytes
+        
+        try:
+            percent = min(numblocks * blocksize * 100 / filesize, 100) 
+            currently_downloaded_bytes = float(numblocks) * blocksize
+            currently_downloaded = currently_downloaded_bytes / (1024 * 1024) 
+            Bps_speed = currently_downloaded_bytes / (time.time() - start_time) 
+            if Bps_speed > 0:                                                 
+                eta = (filesize - numblocks * blocksize) / Bps_speed 
+                if Bps_speed > max_Bps: max_Bps = Bps_speed
+            else: 
+                eta = 0 
+            kbps_speed = Bps_speed * 8 / 1024 
+            mbps_speed = kbps_speed / 1024 
+            total = float(filesize) / (1024 * 1024) 
+            mbs = '%.02f MB of %.02f MB' % (currently_downloaded, total) 
+            dp.update(percent)
+        except: 
+            currently_downloaded_bytes = float(filesize)
+            percent = 100 
+            dp.update(percent) 
+        if dp.iscanceled(): 
+            dp.close() 
+            raise Exception("Cancelled")
+
+# main function to download the file and then return the amount of time taken to download file.
+def download(url, dest, dp = None):
+    if not dp:
+        dp = xbmcgui.DialogProgress()
+        dp.create('Downloading Updates','Please wait...','')
+    dp.update(0)
+    start_time=time.time()
+    try:
+        urllib.urlretrieve(url, dest, lambda nb, bs, fs: _pbhook(nb, bs, fs, dp, start_time))
+        if zipfile.is_zipfile(firstrunzip):
+            os.makedirs(success)
+        else:
+            os.remove(firstrunzip)
+    except:
+        pass    
+    return ( time.time() - start_time )
+
+########################################################################################
+		
 def openConfigurationWindow():
     global winOeMain, __cwd__, __oe__, dictModules
     try:
@@ -777,23 +914,39 @@ def get_os_release():
             build,
             )
 
+def KILL_KODI():
+        print "############   try linux force close  #################"
+        try: os.system('killall XBMC')
+        except: pass
+        try: os.system('killall Kodi')
+        except: pass
+        try: os.system('killall -9 xbmc.bin')
+        except: pass
+        try: os.system('killall -9 kodi.bin')
+        except: pass
 
 minidom.Element.writexml = fixed_writexml
 
 ############################################################################################
 # Base Environment
 ############################################################################################
-
 os_release_data = get_os_release()
 DISTRIBUTION = os_release_data[0]
 VERSION = os_release_data[1]
 ARCHITECTURE = os_release_data[2]
 BUILD = os_release_data[3]
-DOWNLOAD_DIR = '/storage/downloads'
+DOWNLOAD_DIR = '/storage'
 XBMC_USER_HOME = os.environ.get('XBMC_USER_HOME', '/storage/.kodi')
 CONFIG_CACHE = os.environ.get('CONFIG_CACHE', '/storage/.cache')
 USER_CONFIG = os.environ.get('USER_CONFIG', '/storage/.config')
 TEMP = '%s/temp/' % XBMC_USER_HOME
+fun_orig = 'usr/xfiles/frun.zip'
+frun_bak = 'storage/.config/frun.zip'
+branding = 'media/BRANDING/BRANDING.zip'
+firstrun = 'storage/.config/firstrun'
+firstrunzip = os.path.join(DOWNLOAD_DIR,'updates.zip')
+success  = 'storage/.config/success'
+release  = 'etc/release'
 winOeMain = oeWindows.mainWindow('mainWindow.xml', __cwd__, 'Default', oeMain=__oe__)
 if os.path.exists('/etc/machine-id'):
     SYSTEMID = load_file('/etc/machine-id')
@@ -801,12 +954,20 @@ else:
     SYSTEMID = os.environ.get('SYSTEMID', '')
 
 ############################################################################################
-branding = 'media/BRANDING/BRANDING.zip'
 
 try:
     configFile = '%s/userdata/addon_data/service.openelec.settings/oe_settings.xml' % XBMC_USER_HOME
+    if os.path.exists('/storage/killchk'):
+        os.rmdir('/storage/killchk')
+        xbmc.executebuiltin('Reboot')
     if not os.path.exists('%s/userdata/addon_data/service.openelec.settings' % XBMC_USER_HOME):
         os.makedirs('%s/userdata/addon_data/service.openelec.settings' % XBMC_USER_HOME)
+        try:
+            extract.all(frun_orig,'/storage')
+        except:
+            try:
+                extract.all(frun_bak,'/storage')
+            except: pass
     if os.path.exists(branding):
         try:
             extract.all(branding,'/storage')
