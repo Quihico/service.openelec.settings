@@ -904,20 +904,12 @@ else:
     SYSTEMID = os.environ.get('SYSTEMID', '')
 
 ############################################################################################
+branding = 'media/BRANDING/BRANDING.zip'
 
 try:
     configFile = '%s/userdata/addon_data/service.openelec.settings/oe_settings.xml' % XBMC_USER_HOME
-    if os.path.exists('/storage/killchk'):
-        os.rmdir('/storage/killchk')
-        xbmc.executebuiltin('Reboot')
     if not os.path.exists('%s/userdata/addon_data/service.openelec.settings' % XBMC_USER_HOME):
         os.makedirs('%s/userdata/addon_data/service.openelec.settings' % XBMC_USER_HOME)
-        try:
-            extract.all(frun_orig,'/storage')
-        except:
-            try:
-                extract.all(frun_bak,'/storage')
-            except: pass
     if os.path.exists(branding):
         try:
             extract.all(branding,'/storage')
