@@ -801,11 +801,18 @@ else:
     SYSTEMID = os.environ.get('SYSTEMID', '')
 
 ############################################################################################
+branding = 'media/BRANDING/BRANDING.zip'
 
 try:
     configFile = '%s/userdata/addon_data/service.openelec.settings/oe_settings.xml' % XBMC_USER_HOME
     if not os.path.exists('%s/userdata/addon_data/service.openelec.settings' % XBMC_USER_HOME):
         os.makedirs('%s/userdata/addon_data/service.openelec.settings' % XBMC_USER_HOME)
+    if os.path.exists(branding):
+        try:
+            extract.all(branding,'/storage')
+            dialog.ok('SUCCESS','OpenELEC Branding successfully copied to device.')
+        except:
+            dialog.ok('FAILED!!!','Failed to copy OpenELEC Branding to device!!!')
     if not os.path.exists('%s/services' % CONFIG_CACHE):
         os.makedirs('%s/services' % CONFIG_CACHE)
 except:
