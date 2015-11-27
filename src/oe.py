@@ -494,7 +494,7 @@ def openWizard():
         winOeMain = oeWindows.wizard('wizard.xml', __cwd__, 'Default', oeMain=__oe__)
         winOeMain.doModal()
         winOeMain = oeWindows.mainWindow('mainWindow.xml', __cwd__, 'Default', oeMain=__oe__)  # None
-        AfterWizard()
+        xbmc.executebuiltin('RunAddon(script.openwindow)')
     except Exception, e:
         xbmc.executebuiltin('Dialog.Close(busydialog)')
         dbg_log('oe::openWizard', 'ERROR: (' + repr(e) + ')')
