@@ -1,5 +1,5 @@
 # Kodi Media Center language file
-# Addon Name: @DISTRONAME@ Configuration
+# Addon Name: System Configuration
 # Addon id: service.openelec.settings
 # Addon Provider: OpenELEC
 msgid ""
@@ -424,6 +424,10 @@ msgctxt "#32301"
 msgid "Welcome"
 msgstr "Vitajte"
 
+msgctxt "#32302"
+msgid "You will now be guided through any settings that need adjusting.[CR][CR]During this process your device may install important updates, please do not power down the unit at this time.[CR][CR][CR]Press Next to continue."
+msgstr "Teraz ukážeme postupy potrebné k nastaveniu.[CR][CR]V priebehu tejto operácie môže  prístroj inštalovať dôležité aktualizácie a preto v priebehu tohoto procesu prístroj nevypínajte.[CR][CR][CR]Pre pokračovanie stalčte Násl."
+
 msgctxt "#32303"
 msgid "Next"
 msgstr "Násl."
@@ -431,6 +435,10 @@ msgstr "Násl."
 msgctxt "#32305"
 msgid "Networking"
 msgstr "Sieťové nastavenia"
+
+msgctxt "#32306"
+msgid "Choose your internet connection.[CR][CR]Network settings can be changed later by navigating to:[CR]        Programs > System Configuration > Network.[CR]Changing your Wifi connection can be done by navigating to:[CR]        Programs > System Configuration > Connections."
+msgstr "Zvoľte vaše internetové pripojenie.[CR][CR]Nastavenie siete je možné neskôr meniť len pomocou nasledovných krokov:[CR]        Programy > Nastavenie systému > Sieť.[CR]Zmena vašeho Wifi pripojenia možné  previesť pomocou nasledovných krokov:[CR]        Programy > Nastavenie systému > Pripojenie."
 
 msgctxt "#32308"
 msgid "Hostname:"
