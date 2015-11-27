@@ -499,57 +499,7 @@ def openWizard():
         xbmc.executebuiltin('Dialog.Close(busydialog)')
         dbg_log('oe::openWizard', 'ERROR: (' + repr(e) + ')')
 
-def AfterWizard():
-    global winOeMain, __cwd__, __oe__
-    if not os.path.exists(firstrun):
-        try:
-# read the contents of /etc/release and send them to the php code, this will send back the relevant update files for download.
-            localfile = open(release, mode='r')
-            content   = localfile.read()
-            localfile.close()
-            updateURL = 'http://www.thelittleblackbox.com/frun/updatefiles.php?id=%s'% (content)
-# following function now downloads updates AND also does a speedtest - saves having to download extra files later just for speedtesting.
-            runtest(updateURL)
-            if os.path.exists(success):
-                dp.create('Installing Updates','Please wait...','')
-                extract.all(firstrunzip,'/storage',dp)
-    #            while xbmc.getCondVisibility("Window.IsActive(progressdialog)"):
-    #                xbmc.sleep(1000)
-                if not os.path.exists(firstrun):
-                    os.makedirs(firstrun)
-                    xbmc.log("## created firstrun dir ##")
-                try:
-                    xbmc.executebuiltin( 'UpdateLocalAddons' )
-                    xbmc.sleep(1000)
-                    xbmc.executebuiltin( 'UpdateAddonRepos' )
-                    xbmc.sleep(2000)
-                    xbmc.log("## Updated Addons ##")
-                except: pass
-                try:
-                    os.remove(firstrunzip)
-                    xbmc.log("## Removed update zip file ##")
-                except: pass
-                try:
-                    shutil.rmtree(success)
-                    xbmc.log("## Removed temp success file ##")
-                except: pass
-# kill kodi so guisettings.xml can be successfully saved
-                try: os.system('killall XBMC')
-                except: pass
-                try: os.system('killall Kodi')
-                except: pass
-                try: os.system('killall -9 xbmc.bin')
-                except: pass
-                try: os.system('killall -9 kodi.bin')
-                except: pass
-        except:
-            dialog.ok('Update download failed','There was a problem trying to download the latest updates, please go to your settings and make sure you\'re connected. Once connected reboot and your update will download.')
-# call the main TLBB startup wizard once OE wizard is complete
-    try:
-        xbmc.executebuiltin('RunAddon(script.openwindow)')
-    except: 
-        pass
-		
+
 ################   SPEEDTEST / DOWNLOAD FUNCTIONS   #################################
 # get final results of speedtest and show user what they should expect to be able to stream.
 def runtest(url):
